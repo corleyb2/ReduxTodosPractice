@@ -6,16 +6,18 @@ import Todo from "./Todo";
 // ul, maps thru [todos] to create Todo component
 // Todo components pars same as TodoList pars
 
-const TodoList = (todos, boundToggleTodo) => {
+const TodoList = ({ todos, boundToggleTodo }) => {
   return (
     <ul>
       {todos.map((todo, index) => {
-        <Todo
-          key={index}
-          onClick={() => boundToggleTodo(index)}
-          completed={todo.completed}
-          text={todo.text}
-        />;
+        return (
+          <Todo
+            key={index}
+            onClick={() => boundToggleTodo(index)}
+            completed={todo.completed}
+            text={todo.text}
+          />
+        );
       })}
     </ul>
   );

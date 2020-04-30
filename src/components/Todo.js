@@ -5,10 +5,10 @@ import React from "react";
 // css style - item if completed true, linethru; otherwise, unstyled
 // each item renders text passed in
 
-const Todo = ({ boundOnClick, completed, text }) => {
+const Todo = ({ onClick, completed, text }) => {
   return (
     <li
-      onClick={boundOnClick}
+      onClick={onClick}
       style={{ textDecoration: completed ? "line-through" : "none" }}
     >
       {text}
