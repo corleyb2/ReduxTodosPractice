@@ -1,17 +1,15 @@
-import React, { useEffect } from "react";
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
-import run from "./store";
 import VisibleTodoList from "./containers/VisibleTodoList";
+import AddTodoContainer from "./containers/AddTodo";
+import Footer from "./containers/Footer";
 
 function App() {
-  console.log(run);
-  useEffect(() => {
-    run();
-  }, []);
   return (
     <div className="App">
+      <AddTodoContainer />
       <VisibleTodoList />
+      <Footer />
     </div>
   );
 }
