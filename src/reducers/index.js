@@ -48,15 +48,17 @@ function todoReducer(state = [], action) {
 
 // Custom function for exporting root reducer (explicit definition):
 
-// export function rootReducer(state = {}, action) {
-//   return {
-//     visibilityFilter: visibilityReducer(state.visibilityFilter, action),
-//     todos: todoReducer(state.todos, action),
-//   };
-// }
+export default function rootReducer(state = {}, action) {
+  return {
+    visibilityFilter: visibilityReducer(state.visibilityFilter, action),
+    todos: todoReducer(state.todos, action),
+  };
+}
 
 //Using redux combineReducers
-export const rootReducer = combineReducers({
-  todoReducer,
-  visibilityReducer,
-});
+// const rootReducer = combineReducers({
+//   todoReducer,
+//   visibilityReducer,
+// });
+
+// export default rootReducer;

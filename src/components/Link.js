@@ -1,3 +1,5 @@
+import React from "react";
+
 // Component takes 3 destructured args
 //  A1) is link active or not
 //  A2) link's children

@@ -17,14 +17,8 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-function mapStateToProps(state) {
-  return { todos: getVisibleTodos(state) };
-}
-
-// 2) function that returns a list of todos based on current state's value of visibility filter
-
 function getVisibleTodos(state) {
-  switch (state.visibilityReducer) {
+  switch (state.visibilityFilter) {
     case SHOW_ALL:
       return state.todos;
     case SHOW_COMPLETED:
@@ -35,6 +29,12 @@ function getVisibleTodos(state) {
       return state.todos;
   }
 }
+
+function mapStateToProps(state) {
+  return { todos: getVisibleTodos(state) };
+}
+
+// 2) function that returns a list of todos based on current state's value of visibility filter
 
 const VisibleTodoList = connect(mapStateToProps, mapDispatchToProps)(TodoList);
 

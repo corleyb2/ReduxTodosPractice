@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import VisibleTodoList from "./containers/VisibleTodoList";
 import AddTodoContainer from "./containers/AddTodo";
-import Footer from "./containers/Footer";
+import Footer from "./components/Footer";
 
 function App() {
   return (

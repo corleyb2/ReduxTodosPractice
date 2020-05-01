@@ -1,4 +1,6 @@
 import { VisibilityFilters } from "../actions";
+import React from "react";
+import FilterLink from "../containers/FilterLink";
 
 // presentational comp.
 // render several filter links (3, 1 for each visibilty Filter type) -> import
@@ -15,3 +17,5 @@ const Footer = () => {
     </div>
   );
 };
+
+export default Footer;

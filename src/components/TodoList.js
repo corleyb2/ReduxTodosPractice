@@ -14,8 +14,9 @@ const TodoList = ({ todos, boundToggleTodo }) => {
           <Todo
             key={index}
             onClick={() => boundToggleTodo(index)}
-            completed={todo.completed}
-            text={todo.text}
+            // completed={todo.completed}
+            // // text={todo.text}
+            {...todo}
           />
         );
       })}
